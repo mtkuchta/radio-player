@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './RadioContainer.module.scss';
-import Radio from './Radio/Radio.js';
+import Radio from '../Radio/Radio.js';
+import VolumePanel from '../VolumePanel/VolumePanel.js';
 
 const RadioContainer = ({
   radioStations,
   play,
   isPlaying,
-  currentStation = { currentStation },
+  currentStation,
+  changeVolume,
 }) => {
   return (
     <div className={styles.radioContainer}>
@@ -20,6 +22,7 @@ const RadioContainer = ({
           currentStation={currentStation}
         />
       ))}
+      <VolumePanel changeVolume={changeVolume} />
     </div>
   );
 };
