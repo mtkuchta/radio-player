@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './App.module.scss';
 import RadioContainer from '../components/RadioContainer/RadioContainer';
+import ReactHowler from 'react-howler';
 
 function App() {
   const radioStations = [
@@ -18,16 +19,38 @@ function App() {
     },
   ];
 
-  const [currentStation, setCurrentStation] = useState(null);
+  const [currentStation, setCurrentStation] = useState({
+    id: '',
+    src: ' ',
+  });
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const playRadio = (e) => {
     const stationID = e.target.parentNode.id;
-    setCurrentStation(stationID);
+    const newStation = radioStations.find((radio) => radio.id === stationID)
+      .src;
+    if (isPlaying && currentStation.id === stationID) {
+      setIsPlaying(!isPlaying);
+    } else {
+      setIsPlaying(true);
+    }
+    setCurrentStation({ id: stationID, src: newStation });
   };
 
   return (
     <div className={styles.App}>
-      <RadioContainer radioStations={radioStations} play={playRadio} />
+      <RadioContainer
+        radioStations={radioStations}
+        play={playRadio}
+        isPlaying={isPlaying}
+        currentStation={currentStation}
+      />
+      <ReactHowler
+        src={currentStation.src}
+        html5={true}
+        playing={isPlaying}
+        preload={true}
+      />
     </div>
   );
 }

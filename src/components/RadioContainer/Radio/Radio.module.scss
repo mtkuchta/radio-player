@@ -19,11 +19,9 @@
   font-size: 40px;
   margin-right: 20px;
   transition: 0.3s;
-  transform: scale(1);
 
   cursor: pointer;
   &:hover {
     color: green;
-    transform: scale(1.1);
   }
 }
