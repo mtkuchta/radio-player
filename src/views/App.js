@@ -2,45 +2,44 @@ import React, { useState } from 'react';
 import styles from './App.module.scss';
 import RadioContainer from '../components/RadioContainer/RadioContainer';
 import ReactHowler from 'react-howler';
+import { radioStations } from '../assets/radioStations';
 
 function App() {
-  const radioStations = [
-    {
-      id: 'rns',
-      name: 'Radio Nowy Świat',
-      src: 'https://stream.nowyswiat.online/aac',
-      logo: '/rns.jpg',
-    },
-    {
-      id: 'r357',
-      name: 'Radio 357',
-      src: 'https://stream.rcs.revma.com/ye5kghkgcm0uv',
-      logo: '',
-    },
-  ];
-
   const [currentStation, setCurrentStation] = useState({
     id: '',
     src: ' ',
   });
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(1);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  const playRadio = (e) => {
-    const stationID = e.target.parentNode.id;
-    const newStation = radioStations.find((radio) => radio.id === stationID)
-      .src;
+  const handlePlaying = (isPlaying, currentStation, stationID) => {
     if (isPlaying && currentStation.id === stationID) {
       setIsPlaying(!isPlaying);
     } else {
       setIsPlaying(true);
     }
+  };
+
+  const playRadio = (e) => {
+    const stationID = e.target.parentNode.id;
+    const newStation = radioStations.find((radio) => radio.id === stationID)
+      .src;
+    if (!(stationID === currentStation.id)) {
+      console.log('jestem');
+      setIsLoaded(false);
+    }
+    handlePlaying(isPlaying, currentStation, stationID);
     setCurrentStation({ id: stationID, src: newStation });
   };
 
   const changeVolume = (e) => {
     const newVolume = Number(e.target.value);
     setVolume(newVolume);
+  };
+
+  const hideLoader = () => {
+    setIsLoaded(true);
   };
 
   return (
@@ -51,12 +50,13 @@ function App() {
         isPlaying={isPlaying}
         currentStation={currentStation}
         changeVolume={changeVolume}
+        isLoaded={isLoaded}
       />
       <ReactHowler
         src={currentStation.src}
         html5={true}
         playing={isPlaying}
-        preload={true}
+        onLoad={hideLoader}
         volume={volume}
       />
     </div>
