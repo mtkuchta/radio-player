@@ -35,3 +35,42 @@
     color: $COMPLEMENTARY_COLOR;
   }
 }
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .radioName {
+    font-size: 36px;
+    font-family: $FONT_FAMILY;
+    margin-left: 30px;
+    color: #222;
+  }
+  .playBtn {
+    font-size: 60px;
+    margin-right: 40px;
+  }
+
+  .radio {
+    width: 80%;
+    height: 15%;
+    box-shadow: inset 0 0 15px $PRIMARY_COLOR;
+  }
+}
+
+@media (max-width: 600px) {
+  .radioName {
+    font-size: 18px;
+    font-family: $FONT_FAMILY;
+    margin-left: 15px;
+    color: #222;
+  }
+
+  .radio {
+    width: 80%;
+    height: 12%;
+    box-shadow: inset 0 0 10px $PRIMARY_COLOR;
+  }
+
+  .playBtn {
+    font-size: 35px;
+    margin-right: 20px;
+  }
+}

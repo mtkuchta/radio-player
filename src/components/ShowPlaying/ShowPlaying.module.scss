@@ -4,10 +4,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 60%;
-  // width: 12%;
+  height: 40%;
   padding-bottom: 3px;
   border-bottom: 1px solid white;
+  margin: auto 0;
 
   .column {
     width: 6px;
@@ -15,5 +15,26 @@
     background-color: white;
     margin: 0 1px;
     background-color: $COMPLEMENTARY_COLOR;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    margin-bottom: 20px;
+  }
+
+  .column {
+    width: 236px;
+    height: 22px;
+    background-color: white;
+    margin: 0 1px;
+    background-color: $COMPLEMENTARY_COLOR;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-bottom: 10px;
+    height: 40%;
   }
 }

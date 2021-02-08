@@ -8,7 +8,10 @@ export const animation = (elements) => {
     return `${height + random}px`;
   };
 
-  const tl = gsap.timeline({ repeat: 1, onComplete: animation });
+  const tl = gsap.timeline({
+    repeat: 1,
+    onComplete: () => animation(elements),
+  });
 
   tl.to(elements, 0.25, {
     height: randomHeight,

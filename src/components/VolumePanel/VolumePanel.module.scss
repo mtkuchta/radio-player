@@ -94,3 +94,27 @@ input[type='range']::-ms-thumb {
   background: $COMPLEMENTARY_COLOR;
   cursor: pointer;
 }
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  label {
+    font-family: $FONT_FAMILY;
+    font-size: 30px;
+    color: $COMPLEMENTARY_COLOR;
+  }
+}
+
+@media (max-width: 600px) {
+  label {
+    font-family: $FONT_FAMILY;
+    font-size: 16px;
+    color: $COMPLEMENTARY_COLOR;
+  }
+
+  input[type='range'] {
+    height: 20px;
+    -webkit-appearance: none;
+    margin: 5px 0;
+    width: 100%;
+    background: transparent;
+  }
+}
