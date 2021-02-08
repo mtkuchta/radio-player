@@ -22,9 +22,14 @@
   border-bottom: 2px solid rgba(238, 245, 219, 0.5);
 }
 
+.empty {
+  flex-grow: 1;
+}
+
 @media (max-width: 600px) {
   .radioContainer {
     width: 100vw;
     height: 100vh;
+    border-radius: 0;
   }
 }

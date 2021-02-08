@@ -26,7 +26,6 @@ function App() {
     const newStation = radioStations.find((radio) => radio.id === stationID)
       .src;
     if (!(stationID === currentStation.id)) {
-      console.log('jestem');
       setIsLoaded(false);
     }
     handlePlaying(isPlaying, currentStation, stationID);

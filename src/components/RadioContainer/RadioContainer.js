@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Radio from '../Radio/Radio.js';
 import VolumePanel from '../VolumePanel/VolumePanel.js';
 
@@ -25,9 +26,25 @@ const RadioContainer = ({
           isLoaded={isLoaded}
         />
       ))}
+      <div className={styles.empty}></div>
       <VolumePanel changeVolume={changeVolume} />
     </div>
   );
+};
+
+RadioContainer.propTypes = {
+  radioData: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    src: PropTypes.string,
+  }),
+  play: PropTypes.func,
+  isPlaying: PropTypes.bool,
+  currentStation: PropTypes.shape({
+    id: PropTypes.string,
+    src: PropTypes.string,
+  }),
+  isLoaded: PropTypes.bool,
 };
 
 export default RadioContainer;

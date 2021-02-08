@@ -1,0 +1,19 @@
+@import '../../assets/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60%;
+  // width: 12%;
+  padding-bottom: 3px;
+  border-bottom: 1px solid white;
+
+  .column {
+    width: 6px;
+    height: 12px;
+    background-color: white;
+    margin: 0 1px;
+    background-color: $COMPLEMENTARY_COLOR;
+  }
+}
