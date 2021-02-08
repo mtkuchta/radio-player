@@ -16,7 +16,7 @@ const Radio = ({
       <h1 className={styles.radioName}>{name}</h1>
       {!isLoaded & (id === currentStation.id) && isPlaying ? <Loader /> : ''}
       {isLoaded & (id === currentStation.id) && isPlaying ? (
-        <ShowPlaying />
+        <ShowPlaying isPlaying={isPlaying} />
       ) : (
         ''
       )}
