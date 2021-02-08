@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/radio-player/static/css/main.e88828b6.chunk.css",
-    "main.js": "/radio-player/static/js/main.5b5c6a7b.chunk.js",
-    "main.js.map": "/radio-player/static/js/main.5b5c6a7b.chunk.js.map",
+    "main.css": "/radio-player/static/css/main.35f83edd.chunk.css",
+    "main.js": "/radio-player/static/js/main.fe08b358.chunk.js",
+    "main.js.map": "/radio-player/static/js/main.fe08b358.chunk.js.map",
     "runtime-main.js": "/radio-player/static/js/runtime-main.4e5f3a73.js",
     "runtime-main.js.map": "/radio-player/static/js/runtime-main.4e5f3a73.js.map",
     "static/js/2.2484dccb.chunk.js": "/radio-player/static/js/2.2484dccb.chunk.js",
     "static/js/2.2484dccb.chunk.js.map": "/radio-player/static/js/2.2484dccb.chunk.js.map",
     "index.html": "/radio-player/index.html",
-    "static/css/main.e88828b6.chunk.css.map": "/radio-player/static/css/main.e88828b6.chunk.css.map",
+    "static/css/main.35f83edd.chunk.css.map": "/radio-player/static/css/main.35f83edd.chunk.css.map",
     "static/js/2.2484dccb.chunk.js.LICENSE.txt": "/radio-player/static/js/2.2484dccb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4e5f3a73.js",
     "static/js/2.2484dccb.chunk.js",
-    "static/css/main.e88828b6.chunk.css",
-    "static/js/main.5b5c6a7b.chunk.js"
+    "static/css/main.35f83edd.chunk.css",
+    "static/js/main.fe08b358.chunk.js"
   ]
 }
