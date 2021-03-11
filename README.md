@@ -10,7 +10,8 @@ Radio Player allows you to switch between two free radio stations : Radio 357 an
 
 - React 17.0.1,
 - HowlerJS 2.2.1,
-- GSAP 3.6.0
+- GSAP 3.6.0,
+- RWD
 
 ## Setup
 
