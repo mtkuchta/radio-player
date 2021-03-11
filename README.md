@@ -4,7 +4,7 @@
 
 Radio Player allows you to switch between two free radio stations : Radio 357 and Radio Nowy Świat. You can find Radio Player demo [here](https://mtkuchta.github.io/radio-player/).
 
-![Radio Player view](./assets/images/radio_player.JPG)
+![Radio Player view](./src/assets/images/radio_player.jpg)
 
 ## Technologies
 
